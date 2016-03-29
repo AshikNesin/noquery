@@ -9,7 +9,7 @@
             // Also create a global in case some scripts
             // that are loaded still are looking for
             // a global even when an AMD loader is in use.
-            return (root.is = factory());
+            return (root.NQ = factory());
         });
     } else if(typeof exports === 'object') {
         // Node. Does not work with strict CommonJS, but
@@ -25,13 +25,15 @@
     /* -------------------------------------------------------------------------- */
 
     var root = this || global;
-
-    // define 'is' object and current version
+    // define 'NQ' object and current version
     var NQ = {};
     NQ.VERSION = '0.0.1';
 
+	// Elements
+    /* -------------------------------------------------------------------------- */
+
     NQ.isExists = function(selector,callback){
-      return (document.querySelector(selector))? callback() : false;
+      return (document.querySelector(selector))? ((typeof callback ==="function")?callback():true) : false;
     }
 
     return NQ;
