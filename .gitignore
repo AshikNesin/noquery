@@ -7,7 +7,8 @@
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -63,4 +64,4 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
-
+test.html

@@ -1,11 +1,17 @@
 ## NoQuery
-### This is a general-purpose library written in vanillaJS.
+This project is intended to ease the use of simple JS functionalities and minimize code.
+
 - No dependencies
 - AMD, Node & browser ready
 
 ### Elements
-#### Check if Element Exists
+
 ```js
-	NQ.exists(selector,callback);
+	// Check if element exists
+	NQ.exists( selector , callback );
 ```
-Inspired by [You Might Not Need jQuery](http://youmightnotneedjquery.com)
+### Validation
+```js
+	// Validate given email id
+	NQ.isEmail( emailID )
+```

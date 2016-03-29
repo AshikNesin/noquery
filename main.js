@@ -2,43 +2,56 @@
 // Author: Ashik Nesin
 
 // AMD with global, Node, or global
-;(function(root, factory) {
-    if(typeof define === 'function' && define.amd) {
+;
+( function( root, factory ) {
+    if ( typeof define === "function" && define.amd ) {
+
         // AMD. Register as an anonymous module.
-        define(function() {
+        define( function() {
+
             // Also create a global in case some scripts
             // that are loaded still are looking for
             // a global even when an AMD loader is in use.
-            return (root.NQ = factory());
-        });
-    } else if(typeof exports === 'object') {
+            return ( root.NQ = factory() );
+        } );
+    } else if ( typeof exports === "object" ) {
+
         // Node. Does not work with strict CommonJS, but
         // only CommonJS-like enviroments that support module.exports,
         // like Node.
         module.exports = factory();
     } else {
+
         // Browser globals (root is window)
         root.NQ = factory();
     }
-} (this, function() {
-	// Baseline
+}( this, function() {
+
+    // Baseline
     /* -------------------------------------------------------------------------- */
 
     var root = this || global;
-    // define 'NQ' object and current version
-    var NQ = {};
-    NQ.VERSION = '0.0.1';
 
-	// Elements
+    // Define 'NQ' object and current version
+    var NQ = {};
+    NQ.VERSION = "0.0.1";
+
+    // Elements
     /* -------------------------------------------------------------------------- */
 
-    NQ.isExists = function(selector,callback){
-      return (document.querySelector(selector))? ((typeof callback ==="function")?callback():true) : false;
-    }
+    NQ.isExists = function( selector, callback ) {
+        return ( document.querySelector( selector ) ) ? ( ( typeof callback === "function" ) ? callback() : true ) : false;
+    };
+
+    // Validation
+    /* -------------------------------------------------------------------------- */
+
+    NQ.isEmail = function( email ) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test( email );
+
+    };
 
     return NQ;
 
-}));
-
-
-
+} ) );
