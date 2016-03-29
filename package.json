@@ -1,0 +1,24 @@
+{
+  "name": "noquery",
+  "version": "0.0.1",
+  "description": "general-purpose library written in vanillaJS",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AshikNesin/noquery.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "noquery",
+    "VanilaJS"
+  ],
+  "author": "Ashik Nesin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AshikNesin/noquery/issues"
+  },
+  "homepage": "https://github.com/AshikNesin/noquery#readme"
+}
