@@ -52,6 +52,17 @@
 
     };
 
+    // Selectors (based on https://gist.github.com/Potfur/5576225)
+    /* -------------------------------------------------------------------------- */
+    window.S = function( s ) {
+        return document[ {
+            "#": "getElementById",
+            ".": "getElementsByClassName",
+            "@": "getElementsByName",
+            "=": "getElementsByTagName"
+        }[ s[ 0 ] ] || "querySelectorAll" ]( s.slice( 1 ) );
+    };
+
     return NQ;
 
 } ) );

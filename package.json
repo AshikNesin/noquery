@@ -1,7 +1,7 @@
 {
   "name": "noquery",
-  "version": "0.0.1",
-  "description": "general-purpose library written in vanillaJS",
+  "version": "0.0.3",
+  "description": "General-purpose library written in vanilla JS",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
